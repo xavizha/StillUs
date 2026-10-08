@@ -1,0 +1,2 @@
+Masukkan photo1.jpg, photo2.jpg, photo3.jpg, photo4.jpg ke folder ini.
+Masukkan BrunoMajor.mp3, EdithWhiskers.mp3, HarryStyles.mp3 jika ingin playlist.
