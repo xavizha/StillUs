@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For You, iel ♡</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="particles"></div>
+
+  <main class="app">
+    <!-- LOGIN -->
+    <section class="screen active" id="loginScreen">
+      <div class="login-card">
+        <div class="tiny">A LITTLE SURPRISE FOR</div>
+        <h1>For You, <em>Alcaraz</em> ♡</h1>
+        <p class="muted">Enter the secret code to open your gift.</p>
+
+        <div class="dots" id="codeDots">
+          <span></span><span></span><span></span><span></span>
+        </div>
+
+        <div class="keypad">
+          <button data-key="1">1</button><button data-key="2">2</button><button data-key="3">3</button>
+          <button data-key="4">4</button><button data-key="5">5</button><button data-key="6">6</button>
+          <button data-key="7">7</button><button data-key="8">8</button><button data-key="9">9</button>
+          <button class="ghost"></button><button data-key="0">0</button><button id="backspace">⌫</button>
+        </div>
+        <p class="hint">Hint: hari jadi kita ✦</p>
+      </div>
+    </section>
+
+    <!-- BIRTHDAY -->
+    <section class="screen" id="birthdayScreen">
+      <div class="hero">
+        <p class="tiny">TODAY IS ALL ABOUT US</p>
+        <h2>SELAMAT<br><span>HARI</span><br><em>JADI</em> ♡</h2>
+        <p class="subtitle">Another beautiful chapter begins...</p>
+        <button class="primary" data-next="letterIntro">open your surprise <span>→</span></button>
+      </div>
+    </section>
+
+    <!-- LETTER INTRO -->
+    <section class="screen" id="letterIntro">
+      <div class="content-card">
+        <div class="icon">✉</div>
+        <p class="tiny">SOMETHING I WANT TO SAY</p>
+        <h2>A Letter<br><em>For You</em></h2>
+        <p class="muted">Some words are easier to write than to say out loud.</p>
+        <button class="primary" data-next="letter">read my letter <span>♡</span></button>
+      </div>
+    </section>
+
+    <!-- LETTER -->
+    <section class="screen" id="letter">
+      <div class="page">
+        <div class="topline"><span>01</span><span>A LETTER FOR YOU</span></div>
+        <h2>Selamat Hari Jadi<em>Kakak Sayang,</em></h2> 
+        <div class="letter-text">
+          <p>I like getting to know you, even knowing that maybe I’ll never truly know every part of you. And honestly, I think that’s okay, karena sampai kapan pun, mungkin akan selalu ada sisi dari seseorang yang baru kita kenal seiring waktu.</p>
+          <p>There are still so many sides of you that I’ve only recently discovered. Some are easy to love, while others are things I’m still learning to understand. But maybe that's what loving someone is supposed to be and still want to discover a little more about them every day.</p>
+          <p>I’ve learned that being loved isn’t only about feeling happy with someone. Sometimes, love also exists in the moments when we’re tired, when we misunderstand each other, or when we don’t even know how to explain what we’re feeling. And I want us to keep learning how to do that.</p>
+          <p>I don’t know what the months ahead will bring, but I know what I want to do today; choose you. Among all the things we still have to learn, I still want to walk beside you. Aku masih mau memperbaiki semuanya ketika ada yang salah, membicarakan hal-hal yang terasa berat, and find our way back to each other whenever we somehow lose our way.</p>
+          <p>Maybe home isn’t always a place. Somewhere between all our conversations, laughter, misunderstandings, missing each other, and all the ordinary days we’ve shared, I found something that feels a little like that with you. I just want to be one of the places you can come to when the world feels too loud. ♡</p>
+        </div>
+        <p class="signature">with lots of love,<br><em>someone who cares about you ♡</em></p>
+        <button class="text-button" data-next="photos">continue →</button>
+      </div>
+    </section>
+
+    <!-- PHOTOS -->
+    <section class="screen" id="photos">
+      <div class="page">
+        <div class="topline"><span>02</span><span>OUR LITTLE MEMORIES</span></div>
+        <h2>A Little Piece<br><em>Of Us</em></h2>
+        <div class="photo-grid">
+          <div class="photo-slot"><img src="assets/photo1.jpg" alt="Memory 1" onerror="this.style.display='none'"><span>you ♡</span></div>
+          <div class="photo-slot tall"><img src="assets/photo2.jpg" alt="Memory 2" onerror="this.style.display='none'"><span>us</span></div>
+          <div class="photo-slot"><img src="assets/photo3.jpg" alt="Memory 3" onerror="this.style.display='none'"><span>me</span></div>
+          <div class="photo-slot"><img src="assets/photo4.jpg" alt="Memory 3" onerror="this.style.display='none'"><span>us2</span></div>
+
+        </div>
+        <button class="text-button" data-next="playlist">next little surprise →</button>
+      </div>
+    </section>
+
+    <!-- PLAYLIST -->
+    <section class="screen" id="playlist">
+      <div class="page">
+        <div class="topline"><span>03</span><span>A SPECIAL PLAYLIST FOR YOU</span></div>
+        <h2>Songs that<br><em>feel like you</em> ♫</h2>
+
+        <div class="song-list">
+          <button class="song" data-audio="assets/BrunoMajor.mp3">
+            <span class="play">▶</span><span><b>The Most Beautiful Thing</b><small>Bruno Major</small></span>
+          </button>
+          <button class="song" data-audio="assets/EdithWhiskers.mp3">
+            <span class="play">▶</span><span><b>Home</b><small>Edith Whiskers</small></span>
+          </button>
+          <button class="song" data-audio="assets/HarryStyles.mp3">
+            <span class="play">▶</span><span><b>Sweet Creature</b><small>Harry Styles</small></span>
+          </button>
+        </div>
+
+        <audio id="audioPlayer" controls></audio>
+        <button class="text-button" data-next="closing">one last thing →</button>
+      </div>
+    </section>
+
+    <!-- CLOSING -->
+    <section class="screen" id="closing">
+      <div class="hero final">
+        <div class="sparkle">✦</div>
+        <p class="tiny">AND FINALLY...</p>
+        <h2>Here's to<br><em>us.</em></h2>
+        <p class="subtitle">To the moments we had,<br>the moments we have,<br>and the ones we haven’t lived yet.</p>
+        <div class="heart">♡</div>
+        <p class="small-note">Happy second month, sayang.<br>I’m glad it’s you ♡</p>
+        <button class="text-button" id="restart">↻ read it again</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
